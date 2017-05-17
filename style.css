@@ -1,1 +1,73 @@
+.header-area {
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
 
+.pg-title {
+	width: 11em;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Pacifico', cursive;
+}
+
+.pg-subtitle {
+	font-family: 'Chelsea Market', cursive;
+}
+
+#begin-button {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#homepage-logo {
+	font-size: 9em;
+}
+
+.homepage-logo-container {
+	width: 21%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.homepage-begin-form {
+	width: 6.55em;
+    padding-left: 42.5%;
+    margin-top: 1em;
+}
+
+.success-icon {
+	margin-right: 1em;
+}
+
+.multi-choice-content {
+	width: 25em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.multi-choice-option {
+    background-color: #EFEFEF;
+    border-radius: 0.25em;
+    border: 0.1em solid #DDD;
+    margin-bottom: 0.5em;
+}
+
+.multi-choice-text {
+	margin-top: 0.5em;
+	font-family: "Arima Madurai", cursive;
+}
+
+.multi-choice-input {
+	border: none;
+}
+
+.question-button {
+	margin-left: 1em;
+}
+
+.question-form {
+	width: 9.55em;
+	margin: 0;
+	padding: 0;
+}
