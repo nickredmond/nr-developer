@@ -51,12 +51,12 @@
   border-top-color:#bbb;
   border-left-color:#bbb;
   background:#fff;
-  width:7.5em;
-  height:7.5em;
+  width:3em;
+  height:3em;
   border-radius:50%;
 }
 .radio:checked{
-  border:20px solid #4099ff;
+  border:0.25em solid #4099ff;
 }
 
 .multi-choice-content {
