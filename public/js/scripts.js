@@ -20,6 +20,8 @@ function getQuestion() {
 }
 
 function getFirstQuestion() {
+	questionsCorrect = 0;
+	questionsAnswered = 0;
 	questionBank = jQuery.extend(true, [], QUESTIONS);
 	getQuestion();
 }
@@ -29,6 +31,7 @@ function startTest() {
 	fillQuestion();
 
 	document.getElementById("homepage-area").style.display = "none";
+	document.getElementById("finished-area").style.display = "none";
 	document.getElementById("question-area").style.display = "block";
 }
 
