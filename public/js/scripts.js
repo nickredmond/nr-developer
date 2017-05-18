@@ -95,3 +95,37 @@ function onAnswerSubmit() {
 		document.getElementById("no-answer-alert").style.display = "block";
 	}
 }
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '930965267011335',
+      xfbml      : true,
+      version    : 'v2.9'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+window.onload = function() {
+	console.log("nope")
+	document.getElementById('shareBtn').onclick = function() {
+		console.log("yep")
+		var percentage = Math.floor((questionsCorrect / questionsAnswered) * 100);
+	    FB.ui({
+	        display: 'popup',
+	        method: 'share',
+	        title: 'I got ' + percentage + '%! How about you?',
+	        description: 'Nick Redmond Trivia',
+	    link: 'http://nr-trivia.herokuapp.com',
+	    picture: '',
+	    href: "http://nr-trivia.herokuapp.com"
+
+	  }, function(response){});
+};
+}
