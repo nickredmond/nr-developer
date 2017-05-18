@@ -60,7 +60,7 @@
 }
 
 .multi-choice-content {
-	width: 25em;
+	width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -101,12 +101,7 @@
 	font-family: "Barrio", cursive;
 }
 
-#percent-progress {
-	max-width: 25em;
-}
-
 #progress-bar-container {
     max-width: 25em;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 2em auto 0 auto;
 }
