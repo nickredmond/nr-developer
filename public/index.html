@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>N.R. Trivia</title>
+		<title>Nick Redmond Trivia</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link href="https://fonts.googleapis.com/css?family=Chelsea+Market|Pacifico|Nova+Mono|Arima+Madurai|Barrio"
 			  rel="stylesheet">
@@ -15,8 +15,21 @@
 		  <script type="text/javascript" src="js/constants.js"></script>
 		  <script type="text/javascript" src="js/scripts.js"></script>
 		<script type="text/javascript" src="js/bootstrap-3.3.7-dist/bootstrap.min.js"></script>
+
+		<meta property="og:url"                content="http://nr-trivia.herokuapp.com" />
+		<meta property="og:type"               content="website" />
+		<meta property="og:title"              content="Nick Redmond Trivia" />
+		<meta property="og:description"        content="How much do you really know about Nick Redmond?" />
 	</head>
 	<body>
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=930965267011335";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 		<div class="container">
 			<div class="row">
 				<div id="homepage-area" class="header-area col-xs-10">
@@ -133,6 +146,7 @@
 					    <span class="sr-only">[Progress Bar Not Available]</span>
 					  </div>
 					</div>
+					<div class="fb-share-button" data-href="http://nr-trivia.herokuapp.com" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="">Share</a></div>
 				</div>
 			</div>
 		</div>

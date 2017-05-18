@@ -200,5 +200,45 @@ var QUESTIONS = [
 			"Beauty, Crystal, Umi"
 		],
 		"correct_answer_index": 3
+	},
+	{
+		"question_text": "What is Nick Redmond's favorite animal?",
+		"possible_answers": [
+			"Koala Bear",
+			"Fire-Bellied Newt",
+			"Grizzly Bear",
+			"Bald Eagle"
+		],
+		"correct_answer_index": 0
+	},
+	{
+		"question_text": "What score did Nick Redmond receive on the ACT?",
+		"possible_answers": [
+			"22",
+			"30",
+			"36",
+			"Nick Redmond did not take the ACT"
+		],
+		"correct_answer_index": 1
+	},
+	{
+		"question_text": "What score did Nick Redmond receive on the SAT?",
+		"possible_answers": [
+			"1080",
+			"1250",
+			"1600",
+			"Nick Redmond did not take the SAT"
+		],
+		"correct_answer_index": 3
+	},
+	{
+		"question_text": "What is Nick Redmond's favorite brand of tobacco (until he quits)?",
+		"possible_answers": [
+			"Marlboro Reds Short",
+			"Marlboro Reds 100",
+			"Camel Crush Menthol",
+			"American Spirits"
+		],
+		"correct_answer_index": 0
 	}
 ];

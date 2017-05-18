@@ -54,6 +54,7 @@ function finishTest() {
 
 	document.getElementById("question-area").style.display = "none";
 	document.getElementById("finished-area").style.display = "block";
+	window.scrollTo(0, 0);
  }
 
 function fillQuestion() {
