@@ -122,7 +122,7 @@ window.onload = function() {
 	        method: 'share',
 	        title: 'I got ' + percentage + '%! How about you?',
 	        description: 'Nick Redmond Trivia',
-	    link: 'http://nr-trivia.herokuapp.com',
+	    link: 'http://nr-trivia.herokuapp.com/link-docs/percent-50.html',
 	    picture: '',
 	    href: "http://nr-trivia.herokuapp.com"
 
