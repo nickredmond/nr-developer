@@ -3,7 +3,7 @@
 	<head>
 		<title>N.R. Trivia</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link href="https://fonts.googleapis.com/css?family=Chelsea+Market|Pacifico|Nova+Mono|Arima+Madurai"
+		<link href="https://fonts.googleapis.com/css?family=Chelsea+Market|Pacifico|Nova+Mono|Arima+Madurai|Barrio"
 			  rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap-3.3.7-dist/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap-3.3.7-dist/bootstrap-theme.min.css">
@@ -12,12 +12,14 @@
 		  src="https://code.jquery.com/jquery-3.2.1.min.js"
 		  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 		  crossorigin="anonymous"></script>
+		  <script type="text/javascript" src="js/constants.js"></script>
+		  <script type="text/javascript" src="js/scripts.js"></script>
 		<script type="text/javascript" src="js/bootstrap-3.3.7-dist/bootstrap.min.js"></script>
 	</head>
 	<body>
 		<div class="container">
 			<div class="row">
-				<div class="header-area" class="col-md-8">
+				<div id="homepage-area" class="header-area col-md-8">
 					<div class="page-header">
 						<h2 class="pg-title">&nbsp;&nbsp;&nbsp;Nick Redmond Trivia<br />
 							<small class="pg-subtitle">How much do you really know?</small>
@@ -27,14 +29,14 @@
 						<span id="homepage-logo" class="glyphicon glyphicon-question-sign"></span>
 					</div>
 					<div class="homepage-begin-form">
-						<button type="button" id="begin-button" class="btn btn-success">
+						<button type="button" id="begin-button" onclick="startTest()" class="btn btn-success">
 							<span class="glyphicon glyphicon-ok success-icon"></span>Begin
 						</button>
 					</div>
 				</div>
-				<div class="header-area" class="col-md-8">
+				<div id="question-area" style="display: none;" class="header-area col-md-8">
 					<div class="page-header">
-						<h2 class="pg-title">&nbsp;&nbsp;&nbsp;Question #1<br />
+						<h2 class="pg-title"><span id="question-title" class="pg-title"></span><br />
 							<small id="question-text" class="pg-subtitle"></small>
 						</h2>
 					</div>
@@ -42,7 +44,11 @@
 						<div class="col-lg-6">
 						    <div class="input-group multi-choice-option">
 						      <span class="input-group-addon multi-choice-input">
-						        <input type="radio" class="radio" name="nr-question" aria-label="...">
+						        <input type="radio" 
+						        	   class="radio" 
+						        	   name="nr-question" 
+						        	   aria-label="..."
+						        	   nr-answer="possible-answer-1">
 						      </span>
 						      <div class="multi-choice-text">
 						      	<span id="possible-answer-1"></span>
@@ -52,7 +58,11 @@
 						  <div class="col-lg-6">
 						    <div class="input-group multi-choice-option">
 						      <span class="input-group-addon multi-choice-input">
-						        <input type="radio" class="radio" name="nr-question" aria-label="...">
+						        <input type="radio" 
+						        	   class="radio" 
+						        	   name="nr-question" 
+						        	   aria-label="..."
+						        	   nr-answer="possible-answer-2">
 						      </span>
 						      <div class="multi-choice-text">
 						      	<span id="possible-answer-2"></span>
@@ -62,7 +72,11 @@
 						  <div class="col-lg-6">
 						    <div class="input-group multi-choice-option">
 						      <span class="input-group-addon multi-choice-input">
-						        <input type="radio" class="radio" name="nr-question" aria-label="...">
+						        <input type="radio" 
+						        	   class="radio" 
+						        	   name="nr-question" 
+						        	   aria-label="..."
+						        	   nr-answer="possible-answer-3">
 						      </span>
 						      </span>
 						      <div class="multi-choice-text">
@@ -73,7 +87,11 @@
 						  <div class="col-lg-6">
 						    <div class="input-group multi-choice-option">
 						      <span class="input-group-addon multi-choice-input">
-						        <input type="radio" class="radio" name="nr-question" aria-label="...">
+						        <input type="radio" 
+						        	   class="radio" 
+						        	   name="nr-question" 
+						        	   aria-label="..."
+						        	   nr-answer="possible-answer-4">
 						      </span>
 						      <div class="multi-choice-text">
 						      	<span id="possible-answer-4"></span>
@@ -82,16 +100,38 @@
 						  </div>
 						  <div id="no-answer-alert"
 						  	   style="display: none;"
-						  	   class="alert alert-warning alert-dismissible" 
+						  	   class="alert alert-warning" 
 						  	   role="alert">
-							  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 							  <strong>Oops!</strong> Please select an answer before submitting.
 							</div>
 						 <div class="homepage-begin-form question-form">
-							<button type="button" class="btn btn-success question-button">
+							<button onclick="onAnswerSubmit()"
+									type="button" 
+									class="btn btn-success question-button">
 								<span class="glyphicon glyphicon-ok success-icon"></span>Submit Answer
 							</button>
 						</div>
+					</div>
+				</div>
+				<div id="finished-area" style="display: none"; class="header-area col-md-8">
+					<div class="page-header">
+						<h2 class="pg-title">Trivia Quiz Complete!</h2>
+					</div>
+					<div id="percent-correct-area">
+						<h4>You got</h4>
+						<span id="percent-correct-label"></span>
+						<h4>correct</h4>
+					</div>
+					<div id="progress-bar-container" class="progress">
+					  <div id="percent-progress"
+					  	   class="progress-bar progress-bar-striped active"
+					  	   role="progressbar" 
+					  	   aria-valuenow="0" 
+					  	   aria-valuemin="0" 
+					  	   aria-valuemax="100" 
+					  	   style="width: 0%">
+					    <span class="sr-only">[Progress Bar Not Available]</span>
+					  </div>
 					</div>
 				</div>
 			</div>

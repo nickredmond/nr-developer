@@ -1,15 +1,6 @@
-var QUESTIONS = [
-	{
-		"question_text": "",
-		"possible_answers": [
-			"",
-			"",
-			"",
-			""
-		],
-		"correct_answer_index":
-	}
+var QUIZ_LENGTH = 10;
 
+var QUESTIONS = [
 	{
 		"question_text": "When was Nick Redmond born?",
 		"possible_answers": [
@@ -151,13 +142,63 @@ var QUESTIONS = [
 		"correct_answer_index": 1
 	},
 	{
-		"question_text": "",
+		"question_text": "Which one of these awards did Nick Redmond actually win?",
 		"possible_answers": [
-			"",
-			"",
-			"",
-			""
+			"2nd Place, 2015 League of Legends Championship Series",
+			"2nd Place, 2014 Salt Lake County Debate Championship",
+			"1st Place, Yavapai County Science Fair",
+			"1st Place, Mohave Regional Mental Math Competition"
 		],
-		"correct_answer_index":
+		"correct_answer_index": 3
+	},
+	{
+		"question_text": "Which religions has Nick Redmond formally adopted, in the past or now?",
+		"possible_answers": [
+			"Baptism, Methodism, Agnosticism",
+			"Baptism, Protestantism, Agnosticism",
+			"Methodism, Lutheranism",
+			"Catholicism, Agnosticism, Mormonism"
+		],
+		"correct_answer_index": 0
+	},
+	{
+		"question_text": "Where has Nick Redmond been backpacking, before?",
+		"possible_answers": [
+			"Glen Canyon, Yosemite Nat'l Park",
+			"Hassayampa River, Grand Canyon Nat'l Park, Yellowstone Nat'l Park",
+			"Grand Canyon Nat'l Park, Arches Nat'l Park, Yellowstone Nat'l Park",
+			"Grand Canyon Nat'l Park, Yosemite Nat'l Park"
+		],
+		"correct_answer_index": 1
+	},
+	{
+		"question_text": "How many full-time, paid positions has Nick Redmond held?",
+		"possible_answers": [
+			"3",
+			"4",
+			"6",
+			"7"
+		],
+		"correct_answer_index": 1
+	},
+	{
+		"question_text": "Who is Nick Redmond's Goo?",
+		"possible_answers": [
+			"Dunbar",
+			"Santiago",
+			"Legolas",
+			"Blue"
+		],
+		"correct_answer_index": 0
+	},
+	{
+		"question_text": "What are the names of Nick's childhood pets?",
+		"possible_answers": [
+			"Sanchez, Dumbledore",
+			"Beauty, Sanchez, Crystal, Umi",
+			"Crystal, Umi",
+			"Beauty, Crystal, Umi"
+		],
+		"correct_answer_index": 3
 	}
 ];
