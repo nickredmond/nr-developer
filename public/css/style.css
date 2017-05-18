@@ -73,7 +73,8 @@
 }
 
 .multi-choice-text {
-	margin-top: 0.5em;
+	font-size: 1.5em;
+    margin-top: 0.7em;
 	font-family: "Arima Madurai", cursive;
 }
 
@@ -85,4 +86,8 @@
 	width: 9.55em;
 	margin: 0;
 	padding: 0;
+}
+
+#no-answer-alert {
+	display: none !important;
 }

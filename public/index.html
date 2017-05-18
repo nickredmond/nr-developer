@@ -35,51 +35,58 @@
 				<div class="header-area" class="col-md-8">
 					<div class="page-header">
 						<h2 class="pg-title">&nbsp;&nbsp;&nbsp;Question #1<br />
-							<small class="pg-subtitle">When was Nick Redmond born?</small>
+							<small id="question-text" class="pg-subtitle"></small>
 						</h2>
 					</div>
 					<div class="form-group multi-choice-content">
 						<div class="col-lg-6">
 						    <div class="input-group multi-choice-option">
 						      <span class="input-group-addon multi-choice-input">
-						        <input type="radio" class="radio" name="question-1" aria-label="...">
+						        <input type="radio" class="radio" name="nr-question" aria-label="...">
 						      </span>
 						      <div class="multi-choice-text">
-						      	<span>January 20, 1994</span>
+						      	<span id="possible-answer-1"></span>
 						      </div>
 						    </div><!-- /input-group -->
 						  </div>
 						  <div class="col-lg-6">
 						    <div class="input-group multi-choice-option">
 						      <span class="input-group-addon multi-choice-input">
-						        <input type="radio" class="radio" name="question-1" aria-label="...">
+						        <input type="radio" class="radio" name="nr-question" aria-label="...">
 						      </span>
 						      <div class="multi-choice-text">
-						      	<span>February 20, 1995</span>
+						      	<span id="possible-answer-2"></span>
 						      </div>
 						    </div><!-- /input-group -->
 						  </div>
 						  <div class="col-lg-6">
 						    <div class="input-group multi-choice-option">
 						      <span class="input-group-addon multi-choice-input">
-						        <input type="radio" class="radio" name="question-1" aria-label="...">
+						        <input type="radio" class="radio" name="nr-question" aria-label="...">
 						      </span>
 						      </span>
 						      <div class="multi-choice-text">
-						      	<span>February 20, 1994</span>
+						      	<span id="possible-answer-3"></span>
 						      </div>
 						    </div><!-- /input-group -->
 						  </div>
 						  <div class="col-lg-6">
 						    <div class="input-group multi-choice-option">
 						      <span class="input-group-addon multi-choice-input">
-						        <input type="radio" class="radio" name="question-1" aria-label="...">
+						        <input type="radio" class="radio" name="nr-question" aria-label="...">
 						      </span>
 						      <div class="multi-choice-text">
-						      	<span>Febuary 22, 1994</span>
+						      	<span id="possible-answer-4"></span>
 						      </div>
 						    </div><!-- /input-group -->
 						  </div>
+						  <div id="no-answer-alert"
+						  	   style="display: none;"
+						  	   class="alert alert-warning alert-dismissible" 
+						  	   role="alert">
+							  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							  <strong>Oops!</strong> Please select an answer before submitting.
+							</div>
 						 <div class="homepage-begin-form question-form">
 							<button type="button" class="btn btn-success question-button">
 								<span class="glyphicon glyphicon-ok success-icon"></span>Submit Answer
