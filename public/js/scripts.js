@@ -1,3 +1,7 @@
+var currentQuestion = null;
+var questionBank = null;
+var answers = [];
+
 function getSelectedAnswer() {
 	var selectedAnswer = document.querySelector("input[name='nr-question']:checked");
 	var answer = null;
@@ -9,20 +13,35 @@ function getSelectedAnswer() {
 	return answer;
 }
 
-var currentQuestion = null;
-var questionBank = null;
-var questionsAnswered = 0;
-var questionsCorrect = 0;
-
 function getQuestion() {
-	var questionIndex = Math.floor(Math.random() * questionBank.length);
-	currentQuestion = questionBank.splice(questionIndex, 1)[0];
+	currentQuestion = questionBank.shift();
+}
+
+function getQuestionNumber() {
+	return Math.abs(questionBank.length - QUIZ_LENGTH);
+}
+
+function queryQuestionsWithDifficulty(questions, difficulty, amount) {
+	var allQuestions = questions.filter(function(question) {
+		return question["difficulty"] === difficulty
+	});
+	var result = [];
+	for (var i = 0; i < amount; i++) {
+		var index = Math.floor(Math.random() * allQuestions.length);
+		result.push(allQuestions[index]);
+	}
+
+	return result;
 }
 
 function getFirstQuestion() {
-	questionsCorrect = 0;
-	questionsAnswered = 0;
-	questionBank = jQuery.extend(true, [], QUESTIONS);
+	var questions = jQuery.extend(true, [], QUESTIONS);
+	var easyQuestions = queryQuestionsWithDifficulty(questions, "easy", 8);
+	var mediumQuestions = queryQuestionsWithDifficulty(questions, "medium", 7);
+	var hardQuestions = queryQuestionsWithDifficulty(questions, "hard", 6);
+	var expertQuestions = queryQuestionsWithDifficulty(questions, "expert", 4);
+	questionBank = [].concat(easyQuestions, mediumQuestions, hardQuestions, expertQuestions);
+
 	getQuestion();
 }
 
@@ -36,32 +55,46 @@ function startTest() {
 }
 
 function finishTest() {
-	var percentage = Math.floor((questionsCorrect / questionsAnswered) * 100);
-	document.getElementById("percent-correct-label").innerHTML = percentage + "%";
+	$.post("http://nr-trivia.herokuapp.com/grade-quiz", { "answers": answers }, function(data) {
+		var mastery = data.mastery_score;
 
-	var progressBar = document.getElementById("percent-progress");
-	progressBar.setAttribute("aria-valuenow", percentage);
-	progressBar.style.width = percentage + "%";
+		var masteryRank = document.getElementById("mastery-rank");
 
-	var progressClassname = "progress-bar progress-bar-striped active";
-	if (percentage >= 80) {
-		progressClassname += " progress-bar-success";
-	}
-	else if (percentage >= 50) {
-		progressClassname += " progress-bar-warning";
-	}
-	else {
-		progressClassname += " progress-bar-danger";
-	}
-	progressBar.className = progressClassname;
+		var progressBar = document.getElementById("percent-progress");
+		progressBar.setAttribute("aria-valuenow", mastery);
+		progressBar.style.width = mastery + "%";
 
-	document.getElementById("question-area").style.display = "none";
-	document.getElementById("finished-area").style.display = "block";
-	window.scrollTo(0, 0);
+		var progressClassname = "progress-bar progress-bar-striped active";
+		var masteryClassname = "label";
+		var rank = "";
+		if (mastery >= 80) {
+			progressClassname += " progress-bar-success";
+			masteryClassname += " label-success";
+			rank = "Associate";
+		}
+		else if (mastery >= 50) {
+			progressClassname += " progress-bar-warning";
+			masteryClassname += " label-warning";
+			rank = "Friend";
+		}
+		else {
+			progressClassname += " progress-bar-danger";
+			masteryClassname += " label-danger";
+			rank = "Companion";
+		}
+		progressBar.className = progressClassname;
+		masteryRank.className = masteryClassname;
+		masteryRank.innerHTML = rank + " of Nick";
+
+		document.getElementById("question-area").style.display = "none";
+		document.getElementById("finished-area").style.display = "block";
+		window.scrollTo(0, 0);
+	});
  }
 
 function fillQuestion() {
-	document.getElementById("question-title").innerHTML = "Question #" + (questionsAnswered + 1);
+	var questionNumber = ;
+	document.getElementById("question-title").innerHTML = "Question #" + getQuestionNumber();
 	document.getElementById("question-text").innerHTML = currentQuestion["question_text"];
 	document.getElementById("possible-answer-1").innerHTML = currentQuestion["possible_answers"][0];
 	document.getElementById("possible-answer-2").innerHTML = currentQuestion["possible_answers"][1];
@@ -70,14 +103,11 @@ function fillQuestion() {
 }
 
 function getNextQuestion(answer) {
-	var correctIndex = currentQuestion["correct_answer_index"];
-	var correctAnswer = currentQuestion["possible_answers"][correctIndex];
-	if (correctAnswer === answer) {
-		questionsCorrect += 1;
-	}
+	var key = currentQuestion["question_id"];
+	var value = currentQuestion["possible_answers"].indexOf(answer);
+	answers.push({ "key": key, "value": value });
 
-	questionsAnswered += 1;
-	if (questionsAnswered >= QUIZ_LENGTH) {
+	if (getQuestionNumber() >= QUIZ_LENGTH) {
 		finishTest();
 	}
 	else {
@@ -94,23 +124,6 @@ function onAnswerSubmit() {
 		getNextQuestion(answer);
 	}
 	else {
-		console.log('asd')
 		document.getElementById("no-answer-alert").style.display = "block";
 	}
-}
-
-window.onload = function() {
-	document.getElementById('shareBtn').onclick = function() {
-		var percentage = Math.floor((questionsCorrect / questionsAnswered) * 100);
-	    FB.ui({
-	        display: 'popup',
-	        method: 'share',
-	        title: 'I got ' + percentage + '%! How about you?',
-	        description: 'Nick Redmond Trivia',
-	    link: 'http://nr-trivia.herokuapp.com',
-	    picture: '',
-	    href: "http://nr-trivia.herokuapp.com"
-
-	  }, function(response){});
-};
 }
