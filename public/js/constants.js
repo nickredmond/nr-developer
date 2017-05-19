@@ -124,7 +124,7 @@ var QUESTIONS = [
 		"correct_answer_index": 0
 	},
 	{
-		"question_id": 0,
+		"question_id": 10,
 		"question_text": "What is [truly] Nick Redmond's favorite song?",
 		"difficulty": "hard",
 		"possible_answers": [
@@ -136,7 +136,7 @@ var QUESTIONS = [
 		"correct_answer_index": 3
 	},
 	{
-		"question_id": 0,
+		"question_id": 11,
 		"question_text": "Which sports has Nick Redmond played, as part of a team?",
 		"difficulty": "medium",
 		"possible_answers": [
@@ -148,7 +148,7 @@ var QUESTIONS = [
 		"correct_answer_index": 3
 	},
 	{
-		"question_id": 0,
+		"question_id": 12,
 		"question_text": "What are Nick Redmond's favorite pastimes?",
 		"difficulty": "easy",
 		"possible_answers": [
@@ -160,7 +160,7 @@ var QUESTIONS = [
 		"correct_answer_index": 2
 	},
 	{
-		"question_id": 0,
+		"question_id": 13,
 		"question_text": "Who was Nick Redmond's first-grade teacher?",
 		"difficulty": "medium",
 		"possible_answers": [
@@ -172,7 +172,7 @@ var QUESTIONS = [
 		"correct_answer_index": 1
 	},
 	{
-		"question_id": 0,
+		"question_id": 14,
 		"question_text": "Which one of these awards did Nick Redmond actually win?",
 		"difficulty": "hard",
 		"possible_answers": [
@@ -184,7 +184,7 @@ var QUESTIONS = [
 		"correct_answer_index": 3
 	},
 	{
-		"question_id": 0,
+		"question_id": 15,
 		"question_text": "Which religions has Nick Redmond formally adopted, in the past or now?",
 		"difficulty": "hard",
 		"possible_answers": [
@@ -196,7 +196,7 @@ var QUESTIONS = [
 		"correct_answer_index": 0
 	},
 	{
-		"question_id": 0,
+		"question_id": 16,
 		"question_text": "Where has Nick Redmond been backpacking, before?",
 		"difficulty": "hard",
 		"possible_answers": [
@@ -208,7 +208,7 @@ var QUESTIONS = [
 		"correct_answer_index": 1
 	},
 	{
-		"question_id": 0,
+		"question_id": 17,
 		"question_text": "How many full-time, paid positions has Nick Redmond held?",
 		"difficulty": "medium",
 		"possible_answers": [
@@ -220,7 +220,7 @@ var QUESTIONS = [
 		"correct_answer_index": 1
 	},
 	{
-		"question_id": 0,
+		"question_id": 18,
 		"question_text": "Who is Nick Redmond's Goo?",
 		"difficulty": "hard",
 		"possible_answers": [
@@ -232,7 +232,7 @@ var QUESTIONS = [
 		"correct_answer_index": 0
 	},
 	{
-		"question_id": 0,
+		"question_id": 19,
 		"question_text": "What are the names of Nick's childhood pets?",
 		"difficulty": "medium",
 		"possible_answers": [
@@ -244,7 +244,7 @@ var QUESTIONS = [
 		"correct_answer_index": 3
 	},
 	{
-		"question_id": 0,
+		"question_id": 20,
 		"question_text": "What is Nick Redmond's favorite animal?",
 		"difficulty": "hard",
 		"possible_answers": [
@@ -256,7 +256,7 @@ var QUESTIONS = [
 		"correct_answer_index": 0
 	},
 	{
-		"question_id": 0,
+		"question_id": 21,
 		"question_text": "What score did Nick Redmond receive on the ACT?",
 		"difficulty": "hard",
 		"possible_answers": [
@@ -268,7 +268,7 @@ var QUESTIONS = [
 		"correct_answer_index": 1
 	},
 	{
-		"question_id": 0,
+		"question_id": 22,
 		"question_text": "What score did Nick Redmond receive on the SAT?",
 		"difficulty": "hard",
 		"possible_answers": [
@@ -280,7 +280,7 @@ var QUESTIONS = [
 		"correct_answer_index": 3
 	},
 	{
-		"question_id": 0,
+		"question_id": 23,
 		"question_text": "What is Nick Redmond's favorite brand of tobacco (until he quits)?",
 		"difficulty": "easy",
 		"possible_answers": [
@@ -292,7 +292,7 @@ var QUESTIONS = [
 		"correct_answer_index": 0
 	},
 	{
-		"question_id": 0,
+		"question_id": 24,
 		"question_text": "What is Nick Redmond's favorite color?",
 		"difficulty": "easy",
 		"possible_answers": [
@@ -304,7 +304,7 @@ var QUESTIONS = [
 		"correct_answer_index": 3
 	},
 	{
-		"question_id": 0,
+		"question_id": 25,
 		"question_text": "Who is Nick Redmond's favorite U.S. president?",
 		"difficulty": "medium",
 		"possible_answers": [
@@ -316,7 +316,7 @@ var QUESTIONS = [
 		"correct_answer_index": 3
 	},
 	{
-		"question_id": 0,
+		"question_id": 26,
 		"question_text": "Where did Nick Redmond attend high school?",
 		"difficulty": "easy",
 		"possible_answers": [
@@ -328,7 +328,7 @@ var QUESTIONS = [
 		"correct_answer_index": 2
 	},
 	{
-		"question_id": 0,
+		"question_id": 27,
 		"question_text": "What is Nick Redmond's middle name?",
 		"difficulty": "easy",
 		"possible_answers": [
@@ -340,7 +340,7 @@ var QUESTIONS = [
 		"correct_answer_index": 0
 	},
 	{
-		"question_id": 0,
+		"question_id": 28,
 		"question_text": "What is the most embarrassing word Nick Redmond has ever learned?",
 		"difficulty": "expert",
 		"possible_answers": [
@@ -352,7 +352,7 @@ var QUESTIONS = [
 		"correct_answer_index": 3 
 	},
 	{
-		"question_id": 0,
+		"question_id": 29,
 		"question_text": "Which musical instruments has Nick Redmond learned to play?",
 		"difficulty": "medium",
 		"possible_answers": [
@@ -364,7 +364,7 @@ var QUESTIONS = [
 		"correct_answer_index": 1
 	},
 	{
-		"question_id": 0,
+		"question_id": 30,
 		"question_text": "What project did Nick Redmond complete for his undergraduate thesis?",
 		"difficulty": "medium",
 		"possible_answers": [
@@ -376,7 +376,7 @@ var QUESTIONS = [
 		"correct_answer_index": 1
 	},
 	{
-		"question_id": 0,
+		"question_id": 31,
 		"question_text": "Which of these desserts does Nick Redmond often consider to be his favorite?",
 		"difficulty": "easy",
 		"possible_answers": [
@@ -388,7 +388,7 @@ var QUESTIONS = [
 		"correct_answer_index": 2
 	},
 	{
-		"question_id": 0,
+		"question_id": 32,
 		"question_text": "How tall is Nick Redmond?",
 		"difficulty": "easy",
 		"possible_answers": [
@@ -400,7 +400,7 @@ var QUESTIONS = [
 		"correct_answer_index": 2
 	},
 	{
-		"question_id": 0,
+		"question_id": 33,
 		"question_text": "What T.V. show did Nick Redmond and his best friend \"binge watch\" in high school?",
 		"difficulty": "medium",
 		"possible_answers": [
@@ -412,7 +412,7 @@ var QUESTIONS = [
 		"correct_answer_index": 3
 	},
 	{
-		"question_id": 0,
+		"question_id": 34,
 		"question_text": "What is Nick Redmond's favorite game show?",
 		"difficulty": "medium",
 		"possible_answers": [
@@ -424,7 +424,7 @@ var QUESTIONS = [
 		"correct_answer_index": 0 
 	},
 	{
-		"question_id": 0,
+		"question_id": 35,
 		"question_text": "Which one of these high school courses did Nick Redmond actually complete?",
 		"difficulty": "easy",
 		"possible_answers": [
@@ -436,7 +436,7 @@ var QUESTIONS = [
 		"correct_answer_index": 0
 	},
 	{
-		"question_id": 0,
+		"question_id": 36,
 		"question_text": "Which of these high school teachers scared Nick Redmond into doing his homework?",
 		"difficulty": "easy",
 		"possible_answers": [
@@ -448,7 +448,7 @@ var QUESTIONS = [
 		"correct_answer_index": 1
 	},
 	{
-		"question_id": 0,
+		"question_id": 37,
 		"question_text": "Which of these sets of video games has Nick Redmond played to a fault?",
 		"difficulty": "hard",
 		"possible_answers": [
@@ -460,15 +460,15 @@ var QUESTIONS = [
 		"correct_answer_index": 1
 	}
 
-	{
-		"question_text": "",
-		"difficulty": "",
-		"possible_answers": [
-			"",
-			"",
-			"",
-			""
-		],
-		"correct_answer_index": 
-	}
+	// {
+	// 	"question_text": "",
+	// 	"difficulty": "",
+	// 	"possible_answers": [
+	// 		"",
+	// 		"",
+	// 		"",
+	// 		""
+	// 	],
+	// 	"correct_answer_index": 
+	// }
 ];
