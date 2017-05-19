@@ -458,6 +458,14 @@ var QUESTIONS = [
 			"Tetris, Brick Breaker, World of Warcraft, Final Fantasy XV"
 		],
 		"correct_answer_index": 1
+	},
+	{
+		"question_id": 38,
+		"question_text": "",
+		"difficulty": "expert",
+		"possible_answers": [
+
+		]
 	}
 
 	// {

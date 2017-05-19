@@ -8,8 +8,12 @@ use Rack::Static,
 class GradeQuizApp
 	QUIZ_LENGTH = 20
 	correct_answers = {
-		0 => 1,
-		1 => 1
+		0 => 2,
+		1 => 1,
+		2 => 1,
+		3 => 0,
+		4 => 3,
+		
 	}
 
 	def call(env)

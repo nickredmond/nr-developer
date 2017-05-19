@@ -28,7 +28,7 @@ function queryQuestionsWithDifficulty(questions, difficulty, amount) {
 	var result = [];
 	for (var i = 0; i < amount; i++) {
 		var index = Math.floor(Math.random() * allQuestions.length);
-		result.push(allQuestions[index]);
+		result.push(allQuestions.splice(index, 1)[0]);
 	}
 
 	return result;
@@ -55,7 +55,7 @@ function startTest() {
 }
 
 function finishTest() {
-	$.post("http://nr-trivia.herokuapp.com/grade-quiz", { "answers": answers }, function(data) {
+	$.post("/grade-quiz", { "answers": answers }, function(data) {
 		var mastery = data.mastery_score;
 
 		var masteryRank = document.getElementById("mastery-rank");
@@ -93,7 +93,6 @@ function finishTest() {
  }
 
 function fillQuestion() {
-	var questionNumber = ;
 	document.getElementById("question-title").innerHTML = "Question #" + getQuestionNumber();
 	document.getElementById("question-text").innerHTML = currentQuestion["question_text"];
 	document.getElementById("possible-answer-1").innerHTML = currentQuestion["possible_answers"][0];
