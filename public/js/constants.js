@@ -461,22 +461,145 @@ var QUESTIONS = [
 	},
 	{
 		"question_id": 38,
-		"question_text": "",
+		"question_text": "What is Nick Redmond's favorite video game character?",
 		"difficulty": "expert",
 		"possible_answers": [
-
+			"Link",
+			"Ms. Pac-Man",
+			"Heimerdinger",
+			"Bowser"
+		]
+	},
+	{
+		"question_id": 39,
+		"question_text": "Which video game consoles has Nick Redmond owned?",
+		"difficulty": "expert",
+		"possible_answers": [
+			"Gameboy Advance SP, Nintendo Wii, Xbox 360, NES",
+			"Gameboy Advance SP, Nintendo Wii, Xbox 360, Xbox One, NES",
+			"Nintendo 64, Nintendo Wii, Playstation 3, Playstation 4",
+			"Nick Redmond has never owned a video game console"
+		]
+	},
+	{
+		"question_id": 40,
+		"question_text": "What is Nick Redmond's favorite T.V. show?",
+		"difficulty": "medium",
+		"possible_answers": [
+			"The Office",
+			"Tie between The Office and House",
+			"Modern Family",
+			"Glee"
+		]
+	},
+	{
+		"question_id": 41,
+		"question_text": "In which class debate did Nick Redmond take first place?",
+		"difficulty": "expert",
+		"possible_answers": [
+			"Batman v. Superman",
+			"Agnosticism v. Christianity",
+			"Utilitarianism v. Kantianism",
+			"Brad Pitt v. Angelina Jolie"
+		]
+	},
+	{
+		"question_id": 42,
+		"question_text": "Which bone has Nick Redmond fractured?",
+		"difficulty": "expert",
+		"possible_answers": [
+			"Left Scaphoid",
+			"Right Scaphoid",
+			"Left Scapula",
+			"Right Scapula"
+		]
+	},
+	{
+		"question_id": 43,
+		"question_text": "From which school did Nick Redmond graduate with an undergraduate degree?",
+		"difficulty": "easy",
+		"possible_answers": [
+			"Neumont University",
+			"Arizona State University",
+			"Northern Arizona University",
+			"Brigham Young University"
+		]
+	},
+	{
+		"question_id": 44,
+		"question_text": "easy",
+		"difficulty": "What is Nick Redmond's average typing speed, in words per minute (wpm)?",
+		"possible_answers": [
+			"71 wpm",
+			"35 wpm",
+			"122 wpm",
+			"Over 9000 wpm"
+		]
+	},
+	{
+		"question_id": 45,
+		"question_text": "easy",
+		"difficulty": "What is Nick Redmond's favorite fantasy?",
+		"possible_answers": [
+			"Playing Linebacker for the Dallas Cowboys",
+			"Traveling Into a Black Hole",
+			"Becoming Immortal",
+			"Becoming a King"
+		]
+	},
+	{
+		"question_id": 46,
+		"question_text": "What was Nick Redmond's major in college?",
+		"difficulty": "easy",
+		"possible_answers": [
+			"B.S. in Criminal Justice",
+			"A.S. in Criminal Justice",
+			"B.S. in Computer Science",
+			"A.S. in Computer Science"
+		]
+	},
+	{
+		"question_id": 47,
+		"question_text": "Which theme parks has Nick Redmond visited AND ridden roller coasters (including water coasters)?",
+		"difficulty": "easy",
+		"possible_answers": [
+			"Six Flags Magic Mtn. (Valencia), Disneyland (Anaheim), Lagoon (Farmington)",
+			"Wet 'n' Wild (Phoenix), Disneyland (Anaheim), Lagoon (Farmington)",
+			"Wet 'n' Wild (Phoenix), Knott's Berry Farm (Buena Park), Disneyland (Anaheim), Lagoon (Farmington)",
+			"Wet 'n' Wild (Phoenix), Universal Studios Escape (Orlando)"
+		]
+	},
+	{
+		"question_id": 48,
+		"question_text": "What was the name of Nick Redmond's elementary school?",
+		"difficulty": "easy",
+		"possible_answers": [
+			"Wildomar Elementary School",
+			"Taylor Hicks Elementary School",
+			"Miller Valley Elementary School",
+			"Abia Judd Elementary School"
+		]
+	},
+	{
+		"question_id": 49,
+		"question_text": "What was Nick Redmond's best record at a single wrestling tournament?",
+		"difficulty": "easy",
+		"possible_answers": [
+			"6-0 (5 pins)",
+			"4-1 (3 pins)",
+			"2-0 (2 pins)",
+			"1-2 (1 pin)"
+		]
+	},
+	{
+		"question_id": 50,
+		"question_text": "What was the name of Nick Redmond's grade school in kindergarten?",
+		"difficulty": "expert",
+		"possible_answers": [
+			"Eerie Elementary School",
+			"Rover Elementary School",
+			"Wildomar Elementary School",
+			"St. Mary-Basha Catholic School"
 		]
 	}
-
-	// {
-	// 	"question_text": "",
-	// 	"difficulty": "",
-	// 	"possible_answers": [
-	// 		"",
-	// 		"",
-	// 		"",
-	// 		""
-	// 	],
-	// 	"correct_answer_index": 
-	// }
 ];

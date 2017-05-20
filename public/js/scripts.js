@@ -55,14 +55,17 @@ function startTest() {
 }
 
 function finishTest() {
-	$.post("/grade-quiz", { "answers": answers }, function(data) {
+	$.post("/grade-quiz", JSON.stringify({ "answers": answers }), function(data) {
 		var mastery = data.mastery_score;
-
+		console.log("DATA: " + JSON.stringify(data));
+		console.log("mastery: " + mastery)
 		var masteryRank = document.getElementById("mastery-rank");
 
 		var progressBar = document.getElementById("percent-progress");
 		progressBar.setAttribute("aria-valuenow", mastery);
 		progressBar.style.width = mastery + "%";
+
+		document.getElementById("percent-correct-label").innerHTML = mastery.toString();
 
 		var progressClassname = "progress-bar progress-bar-striped active";
 		var masteryClassname = "label";
@@ -70,7 +73,7 @@ function finishTest() {
 		if (mastery >= 80) {
 			progressClassname += " progress-bar-success";
 			masteryClassname += " label-success";
-			rank = "Associate";
+			rank = "Companion";
 		}
 		else if (mastery >= 50) {
 			progressClassname += " progress-bar-warning";
@@ -80,7 +83,7 @@ function finishTest() {
 		else {
 			progressClassname += " progress-bar-danger";
 			masteryClassname += " label-danger";
-			rank = "Companion";
+			rank = "Associate";
 		}
 		progressBar.className = progressClassname;
 		masteryRank.className = masteryClassname;

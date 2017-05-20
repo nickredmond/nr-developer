@@ -7,16 +7,62 @@ use Rack::Static,
 
 class GradeQuizApp
 	QUIZ_LENGTH = 20
-	correct_answers = {
+
+	def call(env)
+		correct_answers = {
 		0 => 2,
 		1 => 1,
 		2 => 1,
 		3 => 0,
 		4 => 3,
-		
+		5 => 3,
+		6 => 2,
+		7 => 2,
+		8 => 1,
+		9 => 0,
+		10 => 3,
+		11 => 3,
+		12 => 2,
+		13 => 1,
+		14 => 3,
+		15 => 0,
+		16 => 1,
+		17 => 1,
+		18 => 0,
+		19 => 3,
+		20 => 0,
+		21 => 1,
+		22 => 3,
+		23 => 0,
+		24 => 3,
+		25 => 3,
+		26 => 2,
+		27 => 0,
+		28 => 3,
+		29 => 1,
+		30 => 1,
+		31 => 2,
+		32 => 2,
+		33 => 3,
+		34 => 0,
+		35 => 0,
+		36 => 1,
+		37 => 1,
+		38 => 2,
+		39 => 1,
+		40 => 1,
+		41 => 0,
+		42 => 3,
+		43 => 0,
+		44 => 0,
+		45 => 1,
+		46 => 2,
+		47 => 3,
+		48 => 2,
+		49 => 2,
+		50 => 0
 	}
 
-	def call(env)
 		request = Rack::Request.new(env)
 		response = nil
 
@@ -29,10 +75,11 @@ class GradeQuizApp
 					number_correct += 1
 				end
 			end
+			puts "percent cor: " + number_correct.to_s
 
-			percentage = number_correct / body["answers"].count
-			score = (percentage * 100).floor
-			mastery = (score * (body["answers"].count / QUIZ_LENGTH)).floor
+			percentage = number_correct.to_f / body["answers"].count
+			puts "pp " + percentage.to_s
+			mastery = (percentage * 100).floor
 			response = [
 				200,
 				{
