@@ -89,6 +89,7 @@ function finishTest() {
 		masteryRank.className = masteryClassname;
 		masteryRank.innerHTML = rank + " of Nick";
 
+		answers = [];
 		document.getElementById("question-area").style.display = "none";
 		document.getElementById("finished-area").style.display = "block";
 		window.scrollTo(0, 0);
