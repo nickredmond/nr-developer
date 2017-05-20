@@ -70,6 +70,7 @@ function finishTest() {
 		var progressClassname = "progress-bar progress-bar-striped active";
 		var masteryClassname = "label";
 		var rank = "";
+		
 		if (mastery >= 80) {
 			progressClassname += " progress-bar-success";
 			masteryClassname += " label-success";
