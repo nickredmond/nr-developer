@@ -118,9 +118,23 @@ class TakeQuizApp
 	end
 end
 
+class CreateQuizApp
+	def call(env)
+		[
+			200,
+			{
+				"Content-Type" => "text/html",
+				"Cache-Control" => "public, max-age=86400"
+			},
+			File.open("public/create-quiz.html", File::RDONLY)
+		]
+	end
+end
+
 run Rack::URLMap.new(
 	"/" => TakeQuizApp.new,
-	"/grade-quiz" => GradeQuizApp.new
+	"/grade-quiz" => GradeQuizApp.new,
+	"/create-quiz" => CreateQuizApp.new
 )
 
 # run lambda { |env|

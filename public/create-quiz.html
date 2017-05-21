@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Create Quiz - N.R. Trivia</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="https://fonts.googleapis.com/css?family=Chelsea+Market|Pacifico|Nova+Mono|Arima+Madurai|Barrio"
+			  rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-3.3.7-dist/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-3.3.7-dist/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.min.css">
+		<script
+		  src="https://code.jquery.com/jquery-3.2.1.min.js"
+		  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		  crossorigin="anonymous"></script>
+		  <script type="text/javascript" src="js/constants.min.js"></script>
+		  <script type="text/javascript" src="js/scripts.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap-3.3.7-dist/bootstrap.min.js"></script>
+
+		<meta property="og:url"                content="http://nr-trivia.herokuapp.com/create-quiz" />
+		<meta property="og:type"               content="website" />
+		<meta property="og:title"              content="Create New Quiz" />
+		<meta property="og:description"        content="Create your own Trivia Quiz!" />
+	</head>
+	<body>
+	<div id="fb-root"></div>
+		<div class="container">
+			<div class="row">
+				<div id="question-area" class="header-area col-xs-10">
+					<div class="page-header">
+						<input id="quiz-name-input" 
+							   type="text" 
+							   class="form-control"
+							   placeholder="Enter quiz name..." />
+						<div id="missing-data-alert"
+						  	   style="display: none;"
+						  	   class="alert alert-warning" 
+						  	   role="alert">
+							  <strong>Oops!</strong> Quiz name may only contain letters, numbers, hyphens (-), and underscores (_).</span>
+							</div>
+					</div>
+					<div class="form-group multi-choice-content">
+						<div class="col-lg-6">
+						    <div class="multi-choice-option">
+						      <div class="multi-choice-text">
+						       	<label for="response-1-input">Response 1:</label>
+						      	<input id="response-1-input" 
+						      		   type="text" 
+						      		   class="form-control" 
+						      		   placeholder="Enter response..." />
+						      </div>
+						    </div><!-- /input-group -->
+						  </div>
+						  <div class="col-lg-6">
+						    <div class="multi-choice-option">
+						      <div class="multi-choice-text">
+						      	<label for="response-2-input">Response 2:</label>
+						      	<input id="response-2-input" 
+						      		   type="text" 
+						      		   class="form-control" 
+						      		   placeholder="Enter response..." />
+						      </div>
+						    </div><!-- /input-group -->
+						  </div>
+						  <div class="col-lg-6">
+						    <div class="multi-choice-option">
+						      <div class="multi-choice-text">
+						      	<label for="response-3-input">Response 3:</label>
+						      	<input id="response-3-input" 
+						      		   type="text" 
+						      		   class="form-control" 
+						      		   placeholder="Enter response..." />
+						      </div>
+						    </div><!-- /input-group -->
+						  </div>
+						  <div class="col-lg-6">
+						    <div class="multi-choice-option">
+						      <div class="multi-choice-text">
+						      	<label for="response-4-input">Response 4:</label>
+						      	<input id="response-4-input" 
+						      		   type="text" 
+						      		   class="form-control" 
+						      		   placeholder="Enter response..." />
+						      </div>
+						    </div><!-- /input-group -->
+						  </div>
+						  <div id="missing-data-alert"
+						  	   style="display: none;"
+						  	   class="alert alert-warning" 
+						  	   role="alert">
+							  <strong>Oops!</strong>&nbsp;<span id="missing-data-message"></span>
+							</div>
+						 <div class="homepage-begin-form question-form">
+							<!-- <button onclick="onAnswerSubmit()"
+									type="button" 
+									class="btn btn-success question-button">
+								<span class="glyphicon glyphicon-ok success-icon"></span>Submit Answer
+							</button> -->
+						</div>
+					</div>
+				</div>
+				<div id="finished-area" style="display: none"; class="header-area col-xs-10">
+					<div class="page-header">
+						<h2 class="pg-title">Trivia Quiz Published!</h2>
+					</div>
+					<div class="alert alert-success">Your quiz is available at <a id="published-quiz-anchor"></a></div>
+					<div id="finished-form">
+						<button type="button" href="/" onclick="" class="btn btn-info">
+							<span class="glyphicon glyphicon-home"></span>&nbsp;Home
+						</button>
+						<div id="shareBtn" class="fb-share-button" data-href="http://nr-trivia.herokuapp.com" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="">Share</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
