@@ -13,7 +13,7 @@
 		  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 		  crossorigin="anonymous"></script>
 		  <script type="text/javascript" src="js/constants.min.js"></script>
-		  <script type="text/javascript" src="js/scripts.min.js"></script>
+		  <script type="text/javascript" src="js/create-quiz.scripts.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap-3.3.7-dist/bootstrap.min.js"></script>
 
 		<meta property="og:url"                content="http://nr-trivia.herokuapp.com/create-quiz" />
@@ -30,18 +30,27 @@
 						<input id="quiz-name-input" 
 							   type="text" 
 							   class="form-control"
-							   placeholder="Enter quiz name..." />
-						<div id="missing-data-alert"
+							   placeholder="Enter quiz name..."
+							   oninput="onQuizNameInput(this.value)" />
+						<div id="invalid-name-alert"
 						  	   style="display: none;"
 						  	   class="alert alert-warning" 
 						  	   role="alert">
 							  <strong>Oops!</strong> Quiz name may only contain letters, numbers, hyphens (-), and underscores (_).</span>
 							</div>
 					</div>
+					<div style="margin: 0;">
+						<h3 class="pg-title">
+							<span id="question-title" class="pg-title">Question #1</span>
+						</h3>
+						<input id="question-text-input"
+									   class="form-control"
+									   placeholder="Enter question text..." />
+					</div>
 					<div class="form-group multi-choice-content">
 						<div class="col-lg-6">
-						    <div class="multi-choice-option">
-						      <div class="multi-choice-text">
+						    <div class="multi-choice-option" style="margin-bottom: .75em;">
+						      <div class="multi-choice-text" style="margin: 0.25em 0.5em 0.5em 0.5em;">
 						       	<label for="response-1-input">Response 1:</label>
 						      	<input id="response-1-input" 
 						      		   type="text" 
@@ -51,8 +60,8 @@
 						    </div><!-- /input-group -->
 						  </div>
 						  <div class="col-lg-6">
-						    <div class="multi-choice-option">
-						      <div class="multi-choice-text">
+						    <div class="multi-choice-option" style="margin-bottom: .75em;">
+						      <div class="multi-choice-text" style="margin: 0.25em 0.5em 0.5em 0.5em;">
 						      	<label for="response-2-input">Response 2:</label>
 						      	<input id="response-2-input" 
 						      		   type="text" 
@@ -62,8 +71,8 @@
 						    </div><!-- /input-group -->
 						  </div>
 						  <div class="col-lg-6">
-						    <div class="multi-choice-option">
-						      <div class="multi-choice-text">
+						    <div class="multi-choice-option" style="margin-bottom: .75em;">
+						      <div class="multi-choice-text" style="margin: 0.25em 0.5em 0.5em 0.5em;">
 						      	<label for="response-3-input">Response 3:</label>
 						      	<input id="response-3-input" 
 						      		   type="text" 
@@ -73,8 +82,8 @@
 						    </div><!-- /input-group -->
 						  </div>
 						  <div class="col-lg-6">
-						    <div class="multi-choice-option">
-						      <div class="multi-choice-text">
+						    <div class="multi-choice-option" style="margin-bottom: .75em;">
+						      <div class="multi-choice-text" style="margin: 0.25em 0.5em 0.5em 0.5em;">
 						      	<label for="response-4-input">Response 4:</label>
 						      	<input id="response-4-input" 
 						      		   type="text" 
@@ -89,12 +98,81 @@
 						  	   role="alert">
 							  <strong>Oops!</strong>&nbsp;<span id="missing-data-message"></span>
 							</div>
-						 <div class="homepage-begin-form question-form">
-							<!-- <button onclick="onAnswerSubmit()"
+						<div class="page-header" style="margin: 0;">
+							<h3 class="pg-title">
+								<span id="question-title" class="pg-title">Correct Response:</span>
+							</h3>
+						</div>
+						<form class="form-group correct-opt-form">
+							<div class="input-group multi-choice-option">
+						      <span class="input-group-addon multi-choice-input">
+						        <input id="correct-opt-1"
+									   class="correct-opt-input radio" 
+									   type="radio"
+									   name="correct-response" 
+									   value="0"  />
+						      </span>
+						      <div class="multi-choice-text">
+						      	<label for="correct-opt-1">Response 1</label>
+						      </div>
+						    </div>
+							<div class="input-group multi-choice-option">
+						      <span class="input-group-addon multi-choice-input">
+						        <input id="correct-opt-2"
+									   class="correct-opt-input radio" 
+									   type="radio"
+									   name="correct-response" 
+									   value="1"  />
+						      </span>
+						      <div class="multi-choice-text">
+						      	<label for="correct-opt-2">Response 2</label>
+						      </div>
+						    </div>
+						    <div class="input-group multi-choice-option">
+						      <span class="input-group-addon multi-choice-input">
+						        <input id="correct-opt-3"
+									   class="correct-opt-input radio" 
+									   type="radio"
+									   name="correct-response" 
+									   value="2"  />
+						      </span>
+						      <div class="multi-choice-text">
+						      	<label for="correct-opt-3">Response 3</label>
+						      </div>
+						    </div>
+						    <div class="input-group multi-choice-option">
+						      <span class="input-group-addon multi-choice-input">
+						        <input id="correct-opt-4"
+									   class="correct-opt-input radio" 
+									   type="radio"
+									   name="correct-response" 
+									   value="3"  />
+						      </span>
+						      <div class="multi-choice-text">
+						      	<label for="correct-opt-4">Response 4</label>
+						      </div>
+						    </div>
+						</form>
+						 <div id="quiz-author-buttons" class="homepage-begin-form question-form">
+						 	<button onclick=""
+									type="button" 
+									class="btn btn-danger question-button">
+								<span class="glyphicon glyphicon-remove success-icon"></span>Delete This Question
+							</button>
+							<button id="add-question-button" 
+								    onclick=""
+								    style="margin-left: 0.5em;"
+									type="button" 
+									class="btn btn-info question-button">
+								<span class="glyphicon glyphicon-plus success-icon"></span>Add New Question
+							</button>
+							<button id="publish-quiz-button" 
+									onclick=""
+									style="margin-left: 2em;"
 									type="button" 
 									class="btn btn-success question-button">
-								<span class="glyphicon glyphicon-ok success-icon"></span>Submit Answer
-							</button> -->
+								<span class="glyphicon glyphicon-ok success-icon"></span>Publish Quiz
+							</button>
 						</div>
 					</div>
 				</div>

@@ -118,3 +118,12 @@
 #play-again-button {
 	margin-bottom: 1em;
 }
+
+#quiz-name-input {
+	font-size: 1.5em;
+    padding: 1em 0 1em 0.5em;
+}
+
+#question-text-input {
+	margin-bottom: 1em;
+}

@@ -7,6 +7,8 @@ var DIFFICULTY_RANKINGS = {
 	"expert": 3
 };
 
+var INVALID_NAME_PATTERN = /[^A-Za-z_-]+/g;
+
 var QUESTIONS = [
 	{
 		"question_id": 0,
