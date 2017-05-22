@@ -149,3 +149,16 @@
 #quiz-author-buttons > button {
 	margin: 0 auto 0.5em auto;
 }
+
+#quiz-author-title {
+    width: 10em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#prev-question-btn {
+	margin-right: 0.5em;
+}
+#next-question-btn {
+	margin-left: 0.5em;
+}
