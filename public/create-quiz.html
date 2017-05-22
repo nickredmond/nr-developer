@@ -36,19 +36,37 @@
 						  	   style="display: none;"
 						  	   class="alert alert-warning" 
 						  	   role="alert">
-							  <strong>Oops!</strong> Quiz name may only contain letters, numbers, hyphens (-), and underscores (_).</span>
-							</div>
+						  <strong>Oops!</strong> Quiz name may only contain letters, numbers, hyphens (-), and underscores (_).</span>
+						</div>
 					</div>
 					<div style="margin: 0;">
 						<h3 id="quiz-author-title" class="pg-title">
-							<button id="prev-question-btn" class="btn btn-info disabled" disabled>
+							<button id="prev-question-btn" class="btn btn-info" style="display: none;">
 								<span class="glyphicon glyphicon-arrow-left"></span>
 							</button>
 							<span id="question-title" class="pg-title">Question #1</span>
-							<button id="next-question-btn" class="btn btn-info disabled" disabled>
+							<button id="next-question-btn" class="btn btn-info" style="display: none;">
 								<span class="glyphicon glyphicon-arrow-right"></span>
 							</button>
 						</h3>
+						<div id="blank-question-text-alert"
+						  	   style="display: none;"
+						  	   class="alert alert-warning" 
+						  	   role="alert">
+						  <strong>Uh-oh!</strong>&nbsp;Question text may not be left blank.</span>
+						</div>
+					  	<div id="blank-responses-alert"
+						  	   style="display: none;"
+						  	   class="alert alert-warning" 
+						  	   role="alert">
+							  <strong>Oh no!</strong>&nbsp;Responses may not be left blank.
+							</div>
+						<div id="blank-correct-response-alert"
+						  	   style="display: none;"
+						  	   class="alert alert-warning" 
+						  	   role="alert">
+						  <strong>Yikes!</strong>&nbsp;Correct response must be selected.</span>
+						</div>
 						<input id="question-text-input"
 									   class="form-control"
 									   placeholder="Enter question text..." />
@@ -98,12 +116,6 @@
 						      </div>
 						    </div><!-- /input-group -->
 						  </div>
-						  <div id="missing-data-alert"
-						  	   style="display: none;"
-						  	   class="alert alert-warning" 
-						  	   role="alert">
-							  <strong>Oops!</strong>&nbsp;<span id="missing-data-message"></span>
-							</div>
 						<div class="page-header" style="margin: 0;">
 							<h3 class="pg-title">
 								<span id="question-title" class="pg-title">Correct Response:</span>
@@ -160,20 +172,26 @@
 						    </div>
 						</form>
 						 <div id="quiz-author-buttons" class="homepage-begin-form question-form">
-						 	<button onclick=""
+						 	<button onclick="onDeleteQuizClick()"
+						 			style="margin-left: 2.15em;"
+									type="button" 
+									class="btn btn-danger question-button">
+								<span class="glyphicon glyphicon-trash success-icon"></span>Delete Quiz
+							</button>
+						 	<button onclick="onDeleteQuestionClick()"
 									type="button" 
 									class="btn btn-danger question-button">
 								<span class="glyphicon glyphicon-remove success-icon"></span>Delete This Question
 							</button>
 							<button id="add-question-button" 
-								    onclick=""
+								    onclick="onAddQuestionClick()"
 								    style="margin-left: 0.5em;"
 									type="button" 
 									class="btn btn-info question-button">
 								<span class="glyphicon glyphicon-plus success-icon"></span>Add New Question
 							</button>
 							<button id="publish-quiz-button" 
-									onclick=""
+									onclick="onPublishQuizClick()"
 									style="margin-left: 2em;"
 									type="button" 
 									class="btn btn-success question-button">
