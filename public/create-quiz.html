@@ -36,7 +36,7 @@
 			        <div class="modal-body">
 			          <p id="confirmation-modal-text"></p>
 			        </div>
-			        <div class="modal-footer">
+			        <div class="modal-footer" style="padding: 0.75em;">
 			          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
 			          <button id="confirm-button"
 			          		  type="button"
@@ -60,6 +60,12 @@
 						  	   class="alert alert-warning" 
 						  	   role="alert">
 						  <strong>Oops!</strong> Quiz name may only contain letters, numbers, hyphens (-), and underscores (_).</span>
+						</div>
+						<div id="blank-name-alert"
+						  	   style="display: none;"
+						  	   class="alert alert-warning" 
+						  	   role="alert">
+						  <strong>Wait!</strong> Quiz name may not be left blank.</span>
 						</div>
 					</div>
 					<div style="margin: 0;">

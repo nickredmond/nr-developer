@@ -122,6 +122,7 @@
 #quiz-name-input {
 	font-size: 1.5em;
     padding: 1em 0 1em 0.5em;
+    margin-bottom: 0.5em;
 }
 
 #invalid-name-alert {
@@ -161,4 +162,12 @@
 }
 #next-question-btn {
 	margin-left: 0.5em;
+}
+
+.modal-header {
+	background-color: #EFEFEF;
+}
+
+#confirmation-modal-text {
+	font-size: 1.2em;
 }
