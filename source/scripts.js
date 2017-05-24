@@ -57,8 +57,6 @@ function startTest() {
 function finishTest() {
 	$.post("/grade-quiz", JSON.stringify({ "answers": answers }), function(data) {
 		var mastery = data.mastery_score;
-		console.log("DATA: " + JSON.stringify(data));
-		console.log("mastery: " + mastery)
 		var masteryRank = document.getElementById("mastery-rank");
 
 		var progressBar = document.getElementById("percent-progress");
