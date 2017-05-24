@@ -96,7 +96,7 @@ class HomeApp
 		if /^\/[A-Za-z0-9_-]+/.match(request.path)
 			quizName = request.path.split("/")[1]
 			quizFilepath = "quizzes/" + quizName + ".json";
-
+			
 			if File.exist?(quizFilepath)
 				file = File.open(quizFilepath, "r")
 				jsonText = ""
