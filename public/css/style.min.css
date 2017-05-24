@@ -1,13 +1,13 @@
 .header-area {
-	margin-left: auto;
+	/*margin-left: auto;
 	margin-right: auto;
-	width: 80%;
+	width: 80%;*/
 }
 
 .pg-title {
-	width: 11em;
+	/*width: 11em;
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: auto;*/
 	font-family: 'Pacifico', cursive;
 }
 
@@ -18,6 +18,10 @@
 #begin-button {
 	margin-left: auto;
 	margin-right: auto;
+	font-size: 1.25em;
+}
+.button-icon {
+	margin-right: 0.5em;
 }
 
 #homepage-logo {
@@ -32,7 +36,8 @@
 
 .homepage-begin-form {
 	width: 20em;
-    padding-left: 42.5%;
+    /*padding-left: 42.5%;*/
+    text-align: center;
     margin-top: 1em;
 }
 
@@ -125,7 +130,7 @@
     padding: 1em 0 1em 0.5em;
     margin-bottom: 0.5em;
     display: inline-block;
-    width: 80%;
+    /*width: 80%;*/
 }
 
 #invalid-name-alert {
@@ -181,4 +186,15 @@
 
 .home-menu-option {
 	margin-bottom: 1em;
+}
+
+#create-quiz-button {
+	margin-bottom: 1em;
+	padding: 0.5em 1em 0 1em;
+    font-size: 1.25em;
+}
+
+#go-to-test-button {
+	height: 3em; 
+	margin-bottom: 1.75em;
 }
