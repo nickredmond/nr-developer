@@ -45,13 +45,26 @@ function getFirstQuestion() {
 	getQuestion();
 }
 
-function startTest() {
-	getFirstQuestion();
-	fillQuestion();
+function startTest(quizName) {
+	// getFirstQuestion();
+	// fillQuestion();
+	$.getJSON("/" + quizName)
+		.done(function(data){
+			console.log("data: " + JSON.stringify(data));
+		})
+		.fail(function(error){
+			if (error["status"] === 404) {
+				document.getElementById("quiz-not-found-label").innerHTML = quizName;
+				document.getElementById("not-found-alert").style.display = "block";
+			}
+		});
 
 	document.getElementById("homepage-area").style.display = "none";
 	document.getElementById("finished-area").style.display = "none";
 	document.getElementById("question-area").style.display = "block";
+}
+function createQuiz() {
+	window.location.href = "/create-quiz";
 }
 
 function finishTest() {

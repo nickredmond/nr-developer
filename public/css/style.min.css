@@ -31,7 +31,7 @@
 }
 
 .homepage-begin-form {
-	width: 6.55em;
+	width: 20em;
     padding-left: 42.5%;
     margin-top: 1em;
 }
@@ -113,6 +113,7 @@
 #finished-form {
 	width: 6.55em;
     margin: 1em auto 0 auto;
+    text-align: center;
 }
 
 #play-again-button {
@@ -123,6 +124,8 @@
 	font-size: 1.5em;
     padding: 1em 0 1em 0.5em;
     margin-bottom: 0.5em;
+    display: inline-block;
+    width: 80%;
 }
 
 #invalid-name-alert {
@@ -170,4 +173,12 @@
 
 #confirmation-modal-text {
 	font-size: 1.2em;
+}
+
+#home-button {
+	margin-bottom: 1em;
+}
+
+.home-menu-option {
+	margin-bottom: 1em;
 }

@@ -110,14 +110,16 @@ class HomeApp
 		if /^\/[A-Za-z0-9_-]+/.match(request.path)
 			quizName = request.path.split("/")[1]
 			quizFilepath = "quizzes/" + quizName + ".json";
+
 			if File.exist?(quizFilepath)
 				file = File.open(quizFilepath, "r")
 				jsonText = ""
 				file.each_line do |line|
 					jsonText += line
 				end
+
 				quizObject = JSON.parse(jsonText)
-				for i in 0..(quizObject.size - 1) do
+				for i in 0..(quizObject["questions"].size - 1) do
 					quizObject["questions"][i].delete("correct-response-index")
 				end
 

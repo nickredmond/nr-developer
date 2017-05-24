@@ -38,13 +38,21 @@
 							<small class="pg-subtitle">How much do you really know?</small>
 						</h2>
 					</div>
-					<div class="homepage-logo-container">
-						<span id="homepage-logo" class="glyphicon glyphicon-question-sign"></span>
-					</div>
-					<div class="homepage-begin-form">
-						<button type="button" id="begin-button" onclick="startTest()" class="btn btn-success">
-							Begin<span class="glyphicon glyphicon-chevron-right next-icon"></span>
+					<div class="form-group homepage-begin-form">
+						<button type="button" id="begin-button" onclick="startTest('nick-redmond')" class="btn btn-success home-menu-option">
+							<span class="glyphicon glyphicon-play"></span>Start Nick Trivia
 						</button>
+						<button type="button" onclick="createQuiz()" class="btn btn-success">
+							<span class="glyphicon glyphicon-pencil home-menu-option"></span>Create Quiz
+						</button>
+						<div class="home-menu-option">
+					      <input id="quiz-name-input" type="text" class="form-control" placeholder="Enter quiz name...">
+					      <span class="input-group-btn">
+					        <button class="btn btn-default" 
+					        	type="button"
+					        	onclick="startTest(null)">Go!</button>
+					      </span>
+					    </div>
 					</div>
 				</div>
 				<div id="question-area" style="display: none;" class="header-area col-xs-10">
@@ -147,8 +155,11 @@
 					  </div>
 					</div>
 					<div id="finished-form">
-						<button type="button" id="play-again-button" onclick="startTest()" class="btn btn-success">
+						<button type="button" id="play-again-button" onclick="startTest('nick-redmond')" class="btn btn-success">
 							Play Again<span class="glyphicon glyphicon-chevron-right next-icon"></span>
+						</button>
+						<button id="home-button" type="button" href="/" onclick="onHomeClick()" class="btn btn-info">
+							<span class="glyphicon glyphicon-home"></span>&nbsp;Home
 						</button>
 						<div id="shareBtn" class="fb-share-button" data-href="http://nr-trivia.herokuapp.com" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="">Share</a></div>
 					</div>

@@ -50,6 +50,12 @@
 			<div class="row">
 				<div id="question-area" class="header-area col-xs-10">
 					<div class="page-header">
+						<div id="no-questions-alert"
+						  	   style="display: none;"
+						  	   class="alert alert-warning" 
+						  	   role="alert">
+						  <span><strong>Hmm...</strong>&nbsp;The quiz must have at least one complete question before it can be published.</span>
+						</div>
 						<input id="quiz-name-input" 
 							   type="text" 
 							   class="form-control"
@@ -59,7 +65,7 @@
 						  	   style="display: none;"
 						  	   class="alert alert-warning" 
 						  	   role="alert">
-						  <span><strong>Aww man :/</strong>Quiz name &quot;<span id="taken-quiz-name-label"></span>&quot; is already taken.</span>
+						  <span><strong>Aww man :/</strong>&nbsp;Quiz name &quot;<span id="taken-quiz-name-label"></span>&quot; is already taken.</span>
 						</div>
 						<div id="invalid-name-alert"
 						  	   style="display: none;"
