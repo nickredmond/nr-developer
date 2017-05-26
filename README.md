@@ -1,1 +1,1 @@
-## Nick Redmond Trivia
+## Nick Redmond - DEVELOPER
