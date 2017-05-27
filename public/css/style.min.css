@@ -1,1 +1,31 @@
-#finished-form,#percent-correct-area,#quiz-author-title{text-align:center}.pg-title{font-family:Pacifico,cursive}.pg-subtitle{font-family:'Chelsea Market',cursive}#begin-button{margin-left:auto;margin-right:auto;font-size:1.25em}.button-icon{margin-right:.5em}#homepage-logo{font-size:9em}.homepage-logo-container{width:21%;margin-left:auto;margin-right:auto}.homepage-begin-form{width:20em;text-align:center;margin-top:1em}.success-icon{margin-right:1em}:focus{outline:0}.radio{-webkit-appearance:button;-moz-appearance:button;appearance:button;border:4px solid #ccc;border-top-color:#bbb;border-left-color:#bbb;background:#fff;width:3em;height:3em;border-radius:50%}.modal-header,.multi-choice-option{background-color:#EFEFEF}.radio:checked{border:.25em solid #4099ff}.multi-choice-content{width:100%;margin-left:auto;margin-right:auto}.multi-choice-option{border-radius:.25em;border:.1em solid #DDD;margin-bottom:.5em}.multi-choice-text{font-size:1.5em;margin-top:.7em;font-family:"Arima Madurai",cursive}.question-button{margin-left:1em}.question-form{width:9.55em;margin:0;padding:0}#percent-correct-area>h4{font-size:2em}#percent-correct-label{font-size:4em;font-family:Barrio,cursive}#progress-bar-container{max-width:25em;margin:2em auto 0}.next-icon{margin-left:.4em}#finished-form{width:6.55em;margin:1em auto 0}#play-again-button,#question-text-input{margin-bottom:1em}#quiz-name-input{font-size:1.5em;padding:1em 0 1em .5em;margin-bottom:.5em;display:inline-block}#invalid-name-alert{margin-top:1em}.correct-opt-form{margin-left:1em;margin-top:.5em}.correct-opt-area>label{margin-left:.75em}#quiz-author-buttons{width:13em;margin-left:auto;margin-right:auto}#quiz-author-buttons>button{margin:0 auto .5em}#quiz-author-title{margin-left:auto;margin-right:auto}#prev-question-btn{margin-right:.5em}#next-question-btn{margin-left:.5em}#confirmation-modal-text{font-size:1.2em}#home-button,.home-menu-option{margin-bottom:1em}#create-quiz-button{margin-bottom:1em;padding:.5em 1em 0;font-size:1.25em}#go-to-test-button{height:3em;margin-bottom:1.75em}
+body {
+	text-align: center;
+}
+
+.subtitle {
+	color: #AAA;
+}
+
+.project-tile {
+	margin-bottom: 0.5em;
+	padding: 0.5em;
+}
+
+.project-tile small {
+	font-style: italic;
+	color: #888;
+}
+
+.project-tile:hover {
+	cursor: pointer;
+	border-radius: 0.5em;
+	border: 0.25em solid #BBB;
+}
+
+.tile-header {
+	margin-top: 0.5em;
+}
+
+.contact-entry {
+	margin-bottom: 0.5em;
+}
