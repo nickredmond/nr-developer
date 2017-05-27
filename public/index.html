@@ -19,6 +19,10 @@
 	<body>
 	<div id="fb-root"></div>
 		<div class="container">
+			<div id="alert-download" style="display: none;" class="alert alert-info" role="alert">
+			  <button type="button" class="close" aria-label="Close" onclick="hideDownloadAlert()"><span aria-hidden="true">&times;</span></button>
+			  <strong id="alert-filename"></strong> Your download will begin shortly...
+			</div>
 			<div class="row">
 				<div class="page-header">
 					<h3 class="page-title">Nick Redmond<br /><small>DEVELOPER</small></h3>
@@ -53,7 +57,7 @@
 			</div>
 			<div class="row">
 				<h4 class="subtitle">Past Works</h4>
-				<a href="/billiards"
+				<a href="/billiards" download="santiago-billiards.zip" onclick="alertDownload('billiards')" 
 					target="_blank">
 					<div class="col-sm-4 project-tile">
 						<div><img id="img-8ball" width="225" height="225" /></div>
@@ -61,7 +65,7 @@
 						<small>windows billiards simulation</small>
 					</div>
 				</a>
-				<a href="/corkydorkz"
+				<a href="/corkydorkz" download="corkydorkz.zip" onclick="alertDownload('corkydorkz')" 
 					target="_blank">
 					<div class="col-sm-4 project-tile">
 						<div><img id="img-bomber" width="225" height="225" /></div>

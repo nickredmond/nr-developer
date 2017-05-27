@@ -30,7 +30,7 @@ class CorkyDorkzApp
 				"Cache-Control" => "public, max-age=86400"
 
 			},
-			File.open("app-files/CorkyDorkz.zip", File::RDONLY)
+			File.new("app-files/CorkyDorkz.zip", File::RDONLY)
 		]
 	end
 end
@@ -44,7 +44,7 @@ class BilliardsApp
 				"Cache-Control" => "public, max-age=86400"
 
 			},
-			File.open("app-files/santiago-billiards.zip", File::RDONLY)
+			File.new("app-files/santiago-billiards.zip", File::RDONLY)
 		]
 	end
 end
